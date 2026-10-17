@@ -40,6 +40,8 @@ class GuiTests(unittest.TestCase):
                 app.join_button.invoke()
                 self.wait(app)
             self.assertEqual(app.values["count"].get(), "2")
+            self.assertTrue(app.participant_list.winfo_ismapped())
+            self.assertGreaterEqual(app.participant_list.winfo_width(), 350)
             self.load_account(app, fixture.owner)
             app.draw_button.invoke()
             self.wait(app)
