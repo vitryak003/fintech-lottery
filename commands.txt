@@ -1,0 +1,21 @@
+# Створення нового порожнього проєкту
+npm init -y
+npx hardhat --init
+npm install --save-dev hardhat
+
+# Для готового проєкту почати з цієї команди
+npm install
+
+# Компіляція та тести
+npx hardhat compile
+npx hardhat test
+
+# Термінал 1: локальний блокчейн
+npx hardhat node
+
+# Термінал 2: деплой обох контрактів та експорт ABI/адрес
+npx hardhat ignition deploy ignition/modules/Lottery.ts --network localhost
+node scripts/export-contracts.mjs
+
+# Скорочений варіант деплою та експорту
+npm run deploy

@@ -1,0 +1,18 @@
+# Виконувати з кореня fintech-lottery, Windows / PowerShell
+python -m venv python/.venv
+.\python\.venv\Scripts\python.exe -m pip install -r python/requirements.txt
+
+# Зберегти повний перелік встановлених бібліотек
+.\python\.venv\Scripts\python.exe -m pip freeze > python/requirements-lock.txt
+
+# Запуск віконного інтерфейсу після запуску Hardhat та деплою
+.\python\.venv\Scripts\python.exe python/app.py
+
+# Перевірки Python на локальному Hardhat
+.\python\.venv\Scripts\python.exe -m unittest discover -s python/tests -v
+
+# Linux / macOS
+python3 -m venv python/.venv
+python/.venv/bin/python -m pip install -r python/requirements.txt
+python/.venv/bin/python -m pip freeze > python/requirements-lock.txt
+python/.venv/bin/python python/app.py

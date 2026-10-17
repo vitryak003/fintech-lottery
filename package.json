@@ -1,0 +1,32 @@
+{
+  "name": "fintech-lottery",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy": "hardhat ignition deploy ignition/modules/Lottery.ts --network localhost && node scripts/export-contracts.mjs",
+    "export": "node scripts/export-contracts.mjs"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "5.0.2",
+    "@nomicfoundation/hardhat-ignition": "3.0.7",
+    "@nomicfoundation/hardhat-ignition-viem": "3.0.7",
+    "@nomicfoundation/hardhat-keystore": "3.0.4",
+    "@nomicfoundation/hardhat-network-helpers": "3.0.3",
+    "@nomicfoundation/hardhat-node-test-runner": "3.0.8",
+    "@nomicfoundation/hardhat-viem": "3.0.2",
+    "@nomicfoundation/hardhat-viem-assertions": "3.0.5",
+    "@nomicfoundation/hardhat-verify": "3.0.10",
+    "@nomicfoundation/ignition-core": "3.0.7",
+    "@types/node": "22.8.5",
+    "hardhat": "3.1.9",
+    "typescript": "5.8.3",
+    "viem": "2.43.0"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
